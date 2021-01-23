@@ -49,7 +49,10 @@ public class CalcWindow  extends JFrame {
                   @Override
                   public void actionPerformed(ActionEvent e) {
                         String[] values = textField.getText().split("\\+");
-                        int sum = Integer.parseInt(values[0])+Integer.parseInt(values[1]);
+                        int sum =0;
+                        for (int i=0;i<values.length;i++){
+                              sum += Integer.parseInt(values[i]);
+                        }
                         textField.setText(String.valueOf(sum));
                   }
             });
